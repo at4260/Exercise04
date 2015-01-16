@@ -179,8 +179,13 @@ def custom_extend(input_list, second_list):
         like input_list.extend(second_list), should append every item in the second 
         list to the end of the first list and return nothing
     """
-    custom_append(input_list, second_list)
-
+    # count1 = custom_len(input_list)
+    # count2 = custom_len(second_list)
+    # for index in range(count2):
+    #     input_list[count1:] = [second_list[index]]
+    
+    for item in second_list:
+        custom_append(input_list,item)
 
 def custom_insert(input_list, index, value):
     """
