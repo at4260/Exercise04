@@ -65,14 +65,14 @@ def last_five(input_list):
         Return the last five elements of the input list.
         [ A, B, C, D, E, F ] --> [ B, C, D, E, F ]
     """
-    pass
+    return input_list[-5:] 
 
 def middle(input_list):
     """
         Return all elements of the input list except the first two and the last two.
         [ A, B, C, D, E, F ] --> [ C, D ]
     """
-    pass
+    return input_list[2:-2] 
 
 def inner_four(input_list):
     """
@@ -80,7 +80,7 @@ def inner_four(input_list):
         [ A, B, C, D, E, F, G ] --> [ C, D, E, F ]
     """
 
-    pass
+    return input_list[2:6] 
 
 def inner_four_end(input_list):
     """
@@ -88,21 +88,24 @@ def inner_four_end(input_list):
         list, in that order.
         [ A, B, C, D, E, F, G ] --> [ F, E, D, C ]
     """
-    pass
+    return input_list[-6:-2] 
 
 def replace_head(input_list):
     """
         Replace the head of the input list with the value 42.
         [ A, B, C, D ] --> [ 42, B, C, D]
     """
-    pass
+    input_list[0] = 42 
+    return input_list
 
 def replace_third_and_last(input_list):
     """
         Replace the third and last elements of the input list with the value 37.
         [ A, B, C, D, E, F ] --> [ A, B, 37, D, E, 37 ]
     """
-    pass
+    input_list[2] = 37
+    input_list[-1] = 37 
+    return input_list
 
 def replace_middle(input_list):
     """
@@ -110,15 +113,17 @@ def replace_middle(input_list):
         that order, except for the first two and last two elements.
         [ A, B, C, D, E, F, G, H, I ] --> [ A, B, 42, 37, H, I ] 
     """
-
-    pass
+    input_list[2:-2] = [42, 37]
+    return input_list 
 
 def delete_third_and_seventh(input_list):
     """
         Remove the third and seventh elements of the input list.
         [ A, B, C, D, E, F, G, H ] --> [ A, B, D, E, F, H ]
     """
-    pass
+    del input_list[2]
+    del input_list[5]
+    return input_list
 
 def delete_middle(input_list):
     """
@@ -126,7 +131,8 @@ def delete_middle(input_list):
         last two.
          [ A, B, C, D, E, F, G, H ] --> [ A, B, G, H ]
     """
-    pass
+    del input_list[2:-2]
+    return input_list
 
 """
 Part 1 is finished! Ask for a code review before proceeding to Part 2.
