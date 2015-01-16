@@ -58,7 +58,7 @@ def first_three(input_list):
         Return the first three elements of the input list.
         [ A, B, C, D, E, F ] --> [ A, B, C ]
     """
-    pass
+    return input_list[:3] 
 
 def last_five(input_list):
     """
