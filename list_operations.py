@@ -121,8 +121,8 @@ def delete_third_and_seventh(input_list):
         Remove the third and seventh elements of the input list.
         [ A, B, C, D, E, F, G, H ] --> [ A, B, D, E, F, H ]
     """
+    del input_list[6]
     del input_list[2]
-    del input_list[5]
     return input_list
 
 def delete_middle(input_list):
@@ -158,7 +158,10 @@ def custom_len(input_list):
     """
         like len(input_list), should return the number of items in the list
     """
-    pass
+    count = 0
+    for item in input_list:
+        count += 1
+    return count
 
 # For the next four functions, get clever using slice operations described in the first half
 def custom_append(input_list, value):
@@ -166,14 +169,18 @@ def custom_append(input_list, value):
         like input_list.append(value), should add the value to the end of the list
         and return nothing
     """
-    pass
+    count = 0
+    for item in input_list:
+        count += 1
+    input_list[count:] = [value]
 
 def custom_extend(input_list, second_list):
-    """
+    """d
         like input_list.extend(second_list), should append every item in the second 
         list to the end of the first list and return nothing
     """
-    pass
+    custom_append(input_list, second_list)
+
 
 def custom_insert(input_list, index, value):
     """
