@@ -219,28 +219,53 @@ def custom_pop(input_list):
         like input_list.pop(), should remove the last item in the list and 
         return it
     """
-    pass
+    popped = input_list[-1]
+    del input_list[-1]
+    return popped 
 
 def custom_index(input_list, value):
     """
         like input_list.index(value), should return the index of the first item 
         which matches the specified value
     """
-    pass
+    count = 0
+    for i in input_list:
+        if i == value:
+            break
+        else:
+            count += 1
+    return count
 
 def custom_count(input_list, value):
     """
         like input_list.count(value), should return the number of times the specified
         value appears in the list.
     """
-    pass
+    count = 0
+    for i in input_list:
+        if i == value:
+            count += 1
+    return count
 
 def custom_reverse(input_list):
     """
         like input_list.reverse(), should reverse the elements of the original list
         and return nothing (we call this reversing "in place")
     """
-    pass
+
+    length = 0
+    for item in input_list:
+        length += 1
+
+
+    corrected_index_range = length -1
+
+    count = 0
+    while count < corrected_index_range:        
+        popped = input_list[-1]
+        input_list[count:count] = [popped]
+        del input_list[-1] 
+        count += 1
 
 def custom_contains(input_list, value):
     """
